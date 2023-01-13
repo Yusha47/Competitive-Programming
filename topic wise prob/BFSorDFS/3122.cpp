@@ -25,7 +25,7 @@ void bfs(int a,int b)
         {
             vx=u.uu+dx[i];
             vy=u.vv+dy[i];
-            if(vx>=0 &&vx<r &&(vy>=0 &&vy<c) &&d[vx][vy]==0)
+            if(vx>=0 &&vx<2 &&(vy>=0 &&vy<c) &&d[vx][vy]==0)
             {
 
                 if(vis[vx][vy]==0)
@@ -44,28 +44,42 @@ void bfs(int a,int b)
 
 int main()
 {
+    long long  t;
 
-    while(scanf("%d %d",&r,&c) &&r &&c)
+    cin>>t;
+
+    while(t--)
     {
-        cln(cost);
-        cln(vis);
         cln(d);
-        int x,r,mine,data;
-        cin>>r;
-        for(int i=0; i<r; i++)
+        cln(vis);
+        cln(cost);
+        long long c;
+        cin>>c;
+        char s[2][c];
+        for(int i=0;i<2;i++)
         {
-            cin>>mine>>data;
-            while(data--)
+            for(int j=0;j<c;j++)
             {
-                cin>>x;
-                d[mine][x]=1;
+                cin>>s[i][j];
             }
-
         }
-        int sx,sy,endx,endy;
-        cin>>sx>>sy>>endx>>endy;
-        bfs(sx,sy);
-        printf("%d\n",cost[endx][endy]);
+
+        bfs(0,1);
+        for(int i=0;i<2;i++)
+        {
+            for(int j=0;j<c;j++)
+            {
+                if(s[i][j]=='B')
+                {
+                    d[i][j]<1;
+                    cout<<"NO"<<endl;
+                    break;
+                }
+            }
+        }
+
+
+
     }
     return 0;
 }

@@ -14,21 +14,41 @@ typedef unsigned long long ull;
 
 #define MOD 1000000007
 #define MX 105
-#define FAST ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 using namespace std;
 
 
+void fast()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+}
+void solve ()
+{
+    ll n;
+    cin>>n;
+    ll a[n+10];
+    ll mul=1;
+    rep(i,n)
+    {
+        cin>>a[i];
+        mul*=a[i];
+    }
+    ll result=(mul+n-1)*2022;
+    cout<<result<<endl;
+}
+
 int32_t main()
 {
-    FAST;
+    fast();
 
-    ll t=1;
+    ll t;cin>>t;
 
 
     while(t--)
     {
-         cout<<__gcd(6, 20);
+        solve();
     }
     return 0;
 }
+
 
