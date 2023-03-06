@@ -19,8 +19,9 @@ int main()
 
 
     //prime factorization
-    for(int i=1; i<10; i++)
+    for(int i=1; i<864; i++)
     {
+        cout<<"i : "<<i<<endl;
         for(int div : divisors[i])
         {
             cout<<div<< " ";

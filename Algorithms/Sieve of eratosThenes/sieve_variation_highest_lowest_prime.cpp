@@ -4,7 +4,7 @@
 using namespace std;
 int main()
 {
-    int n=1e7+10;
+    int n=1e9+10;
     vector<bool> is_prime(n+1, true);
     vector<int>lp(n,0),hp(n,0);
     is_prime[0] = is_prime[1] = false;
@@ -49,10 +49,7 @@ int main()
     }
 
     // for counting how many times are there 24 2(3times) 3 1 times;
-    for(auto factor : prime_factors)
-    {
-        cout<<factor.first<< " "<<factor.second<<"\n";
-    }
+
 
 
 
