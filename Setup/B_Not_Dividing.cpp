@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 typedef long long ll;
 typedef unsigned long long ull;
@@ -44,9 +43,7 @@ int32_t main()
         ull a[n + 10];
 
         int flag = 0;
-
-        ull sum=0;
-
+        ll sum = 0;
         rep(i, n)
         {
             cin >> a[i];
@@ -70,7 +67,7 @@ int32_t main()
                     a[i]++;
                 }
             }
-
+           
             rep(i, n)
             {
                 cout << a[i] << " ";
@@ -78,20 +75,20 @@ int32_t main()
             cout << endl;
         }
 
-        else
+        else 
         {
             rep(i,n)
             {
                 cout << a[i]+i << " ";
             }
             cout<<endl;
-
+            
         }
-
+        
 
     }
 
-     cerr << "\n\n\n"
-          << (float)clock() / CLOCKS_PER_SEC * 1000 << " ms" << endl;
+    // cerr << "\n\n\n"
+    //      << (float)clock() / CLOCKS_PER_SEC * 1000 << " ms" << endl;
     return 0;
 }

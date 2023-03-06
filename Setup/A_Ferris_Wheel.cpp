@@ -24,27 +24,38 @@ int32_t main()
 {
     FAST;
     
-    #ifndef ONLINE_JUDGE
+    //#ifndef ONLINE_JUDGE
 
     // For getting input from input.txt file
-    freopen("input.txt", "r", stdin);
+    
+    // freopen("input.txt", "r", stdin);
 
-    // Printing the Output to output.txt file
-    freopen("output.txt", "w", stdout);
+    // // Printing the Output to output.txt file
+    // freopen("output.txt", "w", stdout);
 
-    #endif
+    // #endif
 
     ll t=1;
-    cin>>t;
+   // cin>>t;
 
 
     while(t--)
     {
-            cout<<4<<endl;
+          ll a,b;
+          cin>>a>>b;
+          if(a>=13)
+          {
+            cout<<b<<endl;
+          }
+          else if(a>=6)
+          {
+            cout<<b/2<<endl;
+          }
+          else cout<<"0"<<endl;
     }
 
-    cerr << "\n\n\n"
-         << (float)clock() / CLOCKS_PER_SEC * 1000 << " ms" << endl;
+    // cerr << "\n\n\n"
+    //      << (float)clock() / CLOCKS_PER_SEC * 1000 << " ms" << endl;
     return 0;
 }
 
